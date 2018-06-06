@@ -30,4 +30,6 @@ Respectivos exercícios resolvidos com métodos e informações sobre cada um:
 ### 10.4-2D
 * Método Steepest Decent  
 * Dados da convergência de x: Burden10-4-2D.dat  
-* Resultado final: x = ( 3.153487, 0.212010, 0.879523 )  
+* Resultado final: x = ( 3.153487, 0.212010, 0.879523 )    
+
+@thadeupenna
