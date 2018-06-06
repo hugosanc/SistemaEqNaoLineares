@@ -101,7 +101,7 @@ void main()
 	for( i = 0; i < N; i++ )
 		J[i] = malloc(N* sizeof(double));
 
-	printf("x[0] \t\tx[1] \t\tx[2]\n%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2]);
+	printf("x[0] \t\tx[1] \t\tx[2] \t\t Norma\n%f \t%f \t%f\n",x0[0], x0[1], x0[2]);
 	do
 	{	norma = norm = 0;
 		//criação da matriz
@@ -114,9 +114,9 @@ void main()
 				L[i][j] = J[i][j];
 			L[i][N] = -F[i](x0);
 		}
-		printf("\nMatrizAumentada { J[%d][%d] | F[%d] }\n", N, N, N);
+		/*printf("\nMatrizAumentada { J[%d][%d] | F[%d] }\n", N, N, N);
 		imprime( L, N, N+1);
-		printf(".......................................................\n");
+		printf(".......................................................\n");*/
 		pivoteamento(L, N, N+1);
 		subreversa(L, y, N);
 		for( i = 0; i < N; i++ )
@@ -124,7 +124,7 @@ void main()
 			x0[i] = x0[i] + y[i];
 			norm += pow(x0[i], 2);
 		}
-		printf("x[0] \t\tx[1] \t\tx[2] \t\tNorma \n%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));	
+		printf("%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));	
 	}while( eps < sqrt(fabs(norma-norm)));
 }
 

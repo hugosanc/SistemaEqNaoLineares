@@ -119,7 +119,7 @@ void main()
 	for( i = 0; i < N; i++ )
 		L[i] = malloc((N+1)* sizeof(double));
 
-	//printf("x[0] \t\tx[1] \t\tx[2] \t\tNorma \n%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));
+	printf("x[0] \t\tx[1] \t\tx[2] \t\tNorma \n%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));
 	do
 	{	norma = norm = 0;
 		//criação da matriz
@@ -138,9 +138,6 @@ void main()
 			x0[i] = x0[i] + y[i];
 			norm += pow(x0[i], 2);
 		}
-		//printf("x[0] \t\tx[1] \t\tx[2] \t\tNorma \n%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));	
+		printf("%f \t%f \t%f \t%f\n",x0[0], x0[1], x0[2], sqrt(fabs(norma-norm)));	
 	}while( eps < sqrt(fabs(norma-norm)));
-	
-	for( i = 0; i < N; i++ )
-		printf("x[%d]: %f\n", i, x0[i]);
 }
